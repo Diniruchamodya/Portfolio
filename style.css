@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background-color: #020617;
+    --text-color: #f0f0f0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+    min-height: 100vh;
+}
+
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    height: 4rem
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+nav ul li {
+
+    display: flex;
+    align-items: center;
+    padding: 0px 1rem;
+
+}
+
+nav ul li:hover {
+    color: var(--background-color);
+    background-color: var(--text-color);
+}
+
+nav a:hover {
+    /* background-color: rgb(255, 255, 255); */
+    /* color: var(--background-color); */
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    z-index: 999;
+    background-color: var(--text-color);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.profilepic {
+    width: 100px;
+    height: 50px;
+}
+
+.profilepic img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* justify-content: center; */
+    /* align-items: center; */
+
+}
+
+.name {
+
+    align-items: center;
+    color: var(--text-color);
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.name h6 {
+    font-size: 20px;
+}
+
+.name button {
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    color: #020617;
+    cursor: pointer;
+    font-family: system-ui;
+    width: 400;
+}
+
+.name button:hover {
+    color: var(--text-color);
+    background-color: red;
+
+}
+
+.socialmedia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.socialmedia img {
+    width: 30px;
+    margin: 40px 20px;
+}
