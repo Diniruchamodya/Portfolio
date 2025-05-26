@@ -23,8 +23,23 @@ body {
     font-weight: 400;
     font-style: normal;
     overflow-x: hidden;
+    background: linear-gradient(135deg, #020617, #7d0525, #020617, #020617);
+    background-size: 300% 300%;
+    animation: color 20s ease-in-out infinite;
+}
 
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
 
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 
@@ -46,6 +61,10 @@ body::before {
 
 }
 
+/* *************nav bar********* */
+nav {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
 
 nav ul {
     width: 100%;
@@ -60,6 +79,23 @@ nav a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 400;
+    position: relative;
+
+}
+
+a:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s ease-in;
+}
+
+a:hover:after {
+    width: 100%;
 }
 
 nav a img {
@@ -75,11 +111,6 @@ nav ul li {
 }
 
 
-
-nav a:hover {
-    /* background-color: rgb(255, 255, 255); */
-    /* color: var(--background-color); */
-}
 
 nav li:first-child {
     margin-right: auto;
@@ -210,6 +241,7 @@ nav li:first-child {
 
 
 
+
 .projects h1 {
     color: var(--text-color);
     text-align: center;
@@ -244,6 +276,7 @@ nav li:first-child {
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 3;
+
 
 
 }
